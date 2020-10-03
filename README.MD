@@ -1,4 +1,12 @@
-# Information
+# Usage
+
+## From the application
+You can drag the monochromeToggle.app file to your toolbar for quick access to click to toggle monochrome.
+
+## From the source code
+If you use the MacOSX's finder (Cmd + Space) and type in Applescript Editor and hit enter, you will open MacOSX's built in automation tool. You can then open up the monochromeToggle.scpt in this editor and click run. This will toggle monochrome on and off on your screen.
+
+## Information
 
 This repository contains code that executes via MacOSX's built in automation language called AppleScript. The program will toggle monochrome on and off. 
 

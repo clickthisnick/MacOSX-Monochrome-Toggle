@@ -1,32 +1,1 @@
-# quit system preferences if running
-if running of application "System Preferences" then
-	try
-		tell application "System Preferences" to quit
-	on error
-		do shell script "killall 'System Preferences'"
-	end try
-end if
-
-# wait for system preferences to quit
-with timeout of 10 seconds
-	repeat while running of application "System Preferences" is true
-		delay 0.01
-	end repeat
-end timeout
-
-# switch to correct anchor
-tell application "System Preferences" to reveal anchor "Seeing_ColorFilters" of pane "Accessibility"
-#tell application "System Preferences" to activate
-#get the name of every anchor of pane "Accessibility" of application "System Preferences"
-
-tell application "System Events" to tell process "System Preferences" to tell window "Accessibility"
-	#return UI elements of tab group 1 of group 1
-	with timeout of 10 seconds
-		repeat until exists checkbox "Enable Color Filters" of tab group 1 of group 1
-			delay 0.01
-		end repeat
-	end timeout
-	click the checkbox "Enable Color Filters" of tab group 1 of group 1
-end tell
-
-tell application "System Preferences" to quit
+# https://apple.stackexchange.com/a/343219use AppleScript version "2.4" -- Yosemite (10.10) or lateruse framework "Foundation"use framework "AppKit"use scripting additionscurrent application's NSWorkspace's sharedWorkspace()'s openURL:(current application's NSURL's URLWithString:"x-apple.systempreferences:com.apple.preference.universalaccess?Seeing_Display")tell application "System Events" to tell application process "System Settings"	repeat until exists window "Display"	end repeat	click checkbox 1 of group 5 of scroll area 1 of group 1 of group 2 of splitter group 1 of group 1 of window "Display"end tellif application "System Settings" is running then	tell application "System Settings" to quitend if

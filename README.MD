@@ -1,14 +1,10 @@
 # Usage
 
-## From the application
-You can drag the monochromeToggle.app file to your toolbar for quick access to click to toggle monochrome.
+Create Shortcuts based on the png in this folder
 
-## From the source code
-If you use the MacOSX's finder (Cmd + Space) and type in Applescript Editor and hit enter, you will open MacOSX's built in automation tool. You can then open up the monochromeToggle.scpt in this editor and click run. This will toggle monochrome on and off on your screen.
+This used to be done with AppleScript but using Shortcuts is cleaner
 
 # Information
-
-This repository contains code that executes via MacOSX's built in automation language called AppleScript. The program will toggle monochrome on and off. 
 
 I strongly believe that using screens in monochrome will lead to less incentive to continue using the screen. If you have ever been to a casino and played slots, it is a lot of fun to lose money when the machine flashes all sorts of colorful lights and vibrant sounds. I believe the bright pixels of a screen act in a somewhat similar fashion to keep you hooked to the screen.
 
@@ -16,19 +12,21 @@ There are a few different files in this repo and are explained below.
 
 # Compatibility
 
-This is known to work for OSX Sonoma. Other versions of OSX might need slight modifications to the AppleScript.
+This is known to work for OSX Sonoma. Other versions of OSX might need modifications to the Shortcut files.
 
 # Files
 
-## monochromeToggle.app
+## toggleOn.png
 
-This is the application that will toggle monochrome for MacOSX. I drag it to my Application bar and click it to toggle monochrome.
+This will be setup on cron to run every minute so that you don't have grayscale turned off for long periods of time
 
-## monochromeToggle.scpt
+## toggleOnOff.png
 
-This is the AppleScript code. If you use the MacOSX's finder (Cmd + Space) and type in Applescript Editor and hit enter, you will open MacOSX's built in automation tool. You can then open up the monochromeToggle.scpt in this editor and click run. This will toggle monochrome on and off on your screen.
+You can add this to the dock so you can toggle grayscale on and off if you need
 
-You can edit this .scpt file and then use "Export" to export the code into an application. These are the same steps I did to make the monochromeToggle.app
+## closeTabs.scpt
+
+File to close Safari browser tabs
 
 ## gray.icns
 

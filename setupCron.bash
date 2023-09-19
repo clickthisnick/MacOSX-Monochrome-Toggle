@@ -1,2 +1,2 @@
-(crontab -l | grep 'cd /Users/mycomputer/dev/MacOSX-Monochrome-Toggle && /usr/bin/env osascript monochromeToggleOn.scpt') || crontab -l | { cat; echo "* * * * * cd /Users/mycomputer/dev/MacOSX-Monochrome-Toggle && /usr/bin/env osascript monochromeToggleOn.scpt"; } | crontab -
-
+(crontab -l | grep 'open /Users/mycomputer/Applications/Toggle\ Color\ Filters\ On\ Cron.app') || crontab -l | { cat; echo "* * * * * open /Users/mycomputer/Applications/Toggle\ Color\ Filters\ On\ Cron.app"; } | crontab -
+(crontab -l | grep 'cd /Users/mycomputer/dev/MacOSX-Monochrome-Toggle && /usr/bin/env osascript closeTabs.scpt') || crontab -l | { cat; echo "*/5 * * * * cd /Users/mycomputer/dev/MacOSX-Monochrome-Toggle && /usr/bin/env osascript closeTabs.scpt"; } | crontab -
